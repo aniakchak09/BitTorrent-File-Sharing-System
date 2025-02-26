@@ -29,7 +29,3 @@ A distributed file sharing system using MPI and threads that mimics BitTorrent's
 - FileData: Stores file info and chunk hashes
 - Args: Contains peer state for threads
 - Seeds/Peers matrices: Track file ownership
-
-### Other notes
-I believe that and implementation where, when a peer finishes downloading a file, the tracker notices all the other clients about the update in the peers/seeds
-lists would be more efficient than the current implementation. The update sent by the tracker would be received by a listener thread of the clients. I did not implement this version because the homework statement mentioned updating the lists every 10 downloaded chunks.
